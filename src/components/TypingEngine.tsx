@@ -170,6 +170,7 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const activeCharRef = useRef<HTMLSpanElement>(null);
+  const textContainerRef = useRef<HTMLDivElement>(null);
 
   // Initialize and auto-focus typing container
   useEffect(() => {
@@ -584,12 +585,6 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
         }
       }
     }
-
-    // Failsafe: some mobile keyboards (autocorrect/predictive text) can desync
-    // word-by-word tracking. If total typed length reaches source length, finish anyway.
-    if (newValue.length >= sourceText.length) {
-      triggerComplete(elapsedSeconds);
-    }
   };
 
   const handleKeyUpInternal = (key: string) => {
@@ -686,17 +681,23 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
     claimFocus();
   };
 
-  // Auto-scroll as the user types - keeps active character visible without fighting mobile keyboard scroll
+  // Auto-scroll as the user types - scrolls ONLY the small text container itself,
+  // never the page/window, so it can't cause the whole screen to jump on mobile.
   useEffect(() => {
-    if (isMobileMode) return; // mobile canvas already has its own short scroll area; skip to avoid jumpy scroll fights
-    if (activeCharRef.current) {
-      activeCharRef.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'nearest'
-      });
-    }
-  }, [typedText.length, isMobileMode]);
+    const container = textContainerRef.current;
+    const el = activeCharRef.current;
+    if (!container || !el) return;
+
+    const elOffsetTop = el.offsetTop - container.offsetTop;
+    const elHeight = el.offsetHeight || 20;
+    const containerHeight = container.clientHeight;
+    const targetScrollTop = elOffsetTop - containerHeight / 2 + elHeight / 2;
+
+    container.scrollTo({
+      top: Math.max(0, targetScrollTop),
+      behavior: 'smooth'
+    });
+  }, [typedText.length]);
 
   // Render typing visual words with rich highlighting
   const renderTextFlow = () => {
@@ -1225,7 +1226,7 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
         )}
 
         {/* Main Text Content */}
-        <div className="w-full text-center max-h-[160px] overflow-y-auto px-4 py-2 scrollbar-none">
+        <div ref={textContainerRef} className="w-full text-center max-h-[220px] overflow-y-auto px-4 py-2 scrollbar-none">
           {renderTextFlow()}
         </div>
       </div>
@@ -1315,5 +1316,4 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
 
 
 /* v8 ignore stop */
-
 
