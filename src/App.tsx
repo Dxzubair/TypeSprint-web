@@ -455,7 +455,7 @@ function MainAppContent() {
             setAchievements(loadAchievements());
             setDailyChallenges(loadDailyChallenges());
             
-            setActiveSession(null);
+           
           }}
           onExit={() => {
             setActiveSession(null);
