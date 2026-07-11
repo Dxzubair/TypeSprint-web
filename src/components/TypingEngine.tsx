@@ -584,6 +584,12 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
         }
       }
     }
+
+    // Failsafe: some mobile keyboards (autocorrect/predictive text) can desync
+    // word-by-word tracking. If total typed length reaches source length, finish anyway.
+    if (newValue.length >= sourceText.length) {
+      triggerComplete(elapsedSeconds);
+    }
   };
 
   const handleKeyUpInternal = (key: string) => {
