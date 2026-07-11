@@ -675,16 +675,17 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
     claimFocus();
   };
 
-  // Auto-scroll as the user types - keeps active character perfectly centered on screen
+  // Auto-scroll as the user types - keeps active character visible without fighting mobile keyboard scroll
   useEffect(() => {
+    if (isMobileMode) return; // mobile canvas already has its own short scroll area; skip to avoid jumpy scroll fights
     if (activeCharRef.current) {
       activeCharRef.current.scrollIntoView({
         behavior: 'smooth',
-        block: 'center',
+        block: 'nearest',
         inline: 'nearest'
       });
     }
-  }, [typedText.length]);
+  }, [typedText.length, isMobileMode]);
 
   // Render typing visual words with rich highlighting
   const renderTextFlow = () => {
@@ -1303,3 +1304,4 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
 
 
 /* v8 ignore stop */
+
