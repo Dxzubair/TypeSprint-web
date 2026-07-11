@@ -1,0 +1,58 @@
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.9 [39m[90m/app/applet[39m
+
+[90mstdout[2m | src/tests/betaFeedback.test.tsx
+[22m[39mFirestore connection test: Online & Secured. (Permission denied on test path as expected).
+
+ [32m✓[39m src/tests/betaFeedback.test.tsx [2m([22m[2m1 test[22m[2m)[22m[33m 3865[2mms[22m[39m
+     [33m[2m✓[22m[39m triggers the BetaFeedbackModal, fills form, submits, and verifies in Firestore [33m 3160[2mms[22m[39m
+[90mstdout[2m | src/App.test.tsx
+[22m[39mFirestore connection test: Successfully connected & read test document.
+
+ [32m✓[39m src/App.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 2813[2mms[22m[39m
+     [33m[2m✓[22m[39m navigates through all tabs [33m 2685[2mms[22m[39m
+[90mstdout[2m | src/components/ParagraphHubDashboard.test.tsx
+[22m[39mFirestore connection test: Successfully connected & read test document.
+
+ [32m✓[39m src/components/ParagraphHubDashboard.test.tsx [2m([22m[2m1 test[22m[2m)[22m[33m 1806[2mms[22m[39m
+     [33m[2m✓[22m[39m renders correctly [33m 1803[2mms[22m[39m
+ [32m✓[39m src/components/ReportParagraphSheet.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 224[2mms[22m[39m
+ [32m✓[39m src/components/ExamHubDashboard.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 97[2mms[22m[39m
+ [32m✓[39m src/components/SettingsPanel.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 98[2mms[22m[39m
+[90mstdout[2m | src/components/TypingEngine.test.tsx
+[22m[39mFirestore connection test: Successfully connected & read test document.
+
+ [32m✓[39m src/components/TypingEngine.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 81[2mms[22m[39m
+ [32m✓[39m src/components/RewardHub.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 74[2mms[22m[39m
+ [32m✓[39m src/components/AchievementsShelf.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 33[2mms[22m[39m
+[90mstdout[2m | src/components/AuthModal.test.tsx
+[22m[39mFirestore connection test: Successfully connected & read test document.
+
+ [32m✓[39m src/components/AuthModal.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 62[2mms[22m[39m
+ [32m✓[39m src/components/StatsDashboard.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 58[2mms[22m[39m
+ [32m✓[39m src/components/GameZone.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 65[2mms[22m[39m
+ [32m✓[39m src/components/ProfileDashboard.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 74[2mms[22m[39m
+[90mstdout[2m | src/components/LeaderboardsDashboard.test.tsx
+[22m[39mFirestore connection test: Successfully connected & read test document.
+
+ [32m✓[39m src/components/LeaderboardsDashboard.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m src/utils/storage.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+[90mstdout[2m | src/utils/sync.test.ts[2m > [22m[2mSync Utilities[2m > [22m[2msyncUserData[2m > [22m[2mcreates a new document if one does not exist
+[22m[39m[Sync] Initiating cloud sync for user test-user-123...
+[Sync] Syncing Profile XP: 150, Level: 1
+[Sync] Syncing Stats - Total Sessions: 0, Best WPM: 0
+[Sync] Syncing Achievements count: 9
+
+[90mstdout[2m | src/utils/sync.test.ts[2m > [22m[2mSync Utilities[2m > [22m[2msyncUserData[2m > [22m[2mcreates a new document if one does not exist
+[22m[39mProgress auto-synced to cloud successfully.
+
+ [32m✓[39m src/utils/sync.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m src/utils/analyticsEngine.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m src/utils/keyboardDetector.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+ [2m[90m↓[39m[22m src/tests/firestore.rules.test.ts [2m([22m[2m12 tests[22m[2m | [22m[33m12 skipped[39m[2m)[22m
+
+[2m Test Files [22m [1m[32m18 passed[39m[22m[2m | [22m[33m1 skipped[39m[90m (19)[39m
+[2m      Tests [22m [1m[32m33 passed[39m[22m[2m | [22m[33m12 skipped[39m[90m (45)[39m
+[2m   Start at [22m 15:09:34
+[2m   Duration [22m 50.54s[2m (transform 2.23s, setup 2.27s, import 8.30s, tests 9.43s, environment 25.19s)[22m
+

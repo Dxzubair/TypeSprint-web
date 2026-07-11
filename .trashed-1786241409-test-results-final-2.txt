@@ -1,0 +1,70 @@
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.9 [39m[90m/app/applet[39m
+
+[90mstdout[2m | src/tests/betaFeedback.test.tsx[2m > [22m[2mBeta Feedback End-to-End
+[22m[39mFirestore connection test: Online & Secured. (Permission denied on test path as expected).
+
+ [32m✓[39m src/tests/betaFeedback.test.tsx [2m([22m[2m1 test[22m[2m)[22m[33m 2929[2mms[22m[39m
+     [33m[2m✓[22m[39m triggers the BetaFeedbackModal, fills form, submits, and verifies in Firestore [33m 2286[2mms[22m[39m
+[90mstdout[2m | src/App.test.tsx
+[22m[39mFirestore connection test: Successfully connected & read test document.
+
+ [32m✓[39m src/App.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[33m 1411[2mms[22m[39m
+     [33m[2m✓[22m[39m navigates through all tabs [33m 1321[2mms[22m[39m
+[90mstdout[2m | src/components/ParagraphHubDashboard.test.tsx
+[22m[39mFirestore connection test: Successfully connected & read test document.
+
+ [32m✓[39m src/components/ParagraphHubDashboard.test.tsx [2m([22m[2m1 test[22m[2m)[22m[33m 818[2mms[22m[39m
+     [33m[2m✓[22m[39m renders correctly [33m 815[2mms[22m[39m
+ [32m✓[39m src/components/ReportParagraphSheet.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 203[2mms[22m[39m
+ [32m✓[39m src/components/ExamHubDashboard.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 102[2mms[22m[39m
+[90mstdout[2m | src/components/TypingEngine.test.tsx
+[22m[39mFirestore connection test: Successfully connected & read test document.
+
+ [32m✓[39m src/components/TypingEngine.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 79[2mms[22m[39m
+ [32m✓[39m src/components/SettingsPanel.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 79[2mms[22m[39m
+[90mstdout[2m | src/components/AuthModal.test.tsx
+[22m[39mFirestore connection test: Successfully connected & read test document.
+
+ [32m✓[39m src/components/AuthModal.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 48[2mms[22m[39m
+ [32m✓[39m src/components/RewardHub.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 69[2mms[22m[39m
+ [32m✓[39m src/components/GameZone.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 48[2mms[22m[39m
+ [32m✓[39m src/components/StatsDashboard.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 52[2mms[22m[39m
+ [32m✓[39m src/components/ProfileDashboard.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 44[2mms[22m[39m
+ [32m✓[39m src/components/AchievementsShelf.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 59[2mms[22m[39m
+[90mstdout[2m | src/components/LeaderboardsDashboard.test.tsx
+[22m[39mFirestore connection test: Successfully connected & read test document.
+
+ [32m✓[39m src/components/LeaderboardsDashboard.test.tsx [2m([22m[2m1 test[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m src/utils/storage.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+[90mstdout[2m | src/utils/sync.test.ts[2m > [22m[2mSync Utilities[2m > [22m[2msyncUserData[2m > [22m[2mcreates a new document if one does not exist
+[22m[39m[Sync] Initiating cloud sync for user test-user-123...
+[Sync] Syncing Profile XP: 150, Level: 1
+[Sync] Syncing Stats - Total Sessions: 0, Best WPM: 0
+[Sync] Syncing Achievements count: 9
+
+[90mstdout[2m | src/utils/sync.test.ts[2m > [22m[2mSync Utilities[2m > [22m[2msyncUserData[2m > [22m[2mcreates a new document if one does not exist
+[22m[39mProgress auto-synced to cloud successfully.
+
+ [32m✓[39m src/utils/sync.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m src/utils/analyticsEngine.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m src/utils/keyboardDetector.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+ [31m❯[39m src/tests/firestore.rules.test.ts [2m([22m[2m12 tests[22m[2m | [22m[33m12 skipped[39m[2m)[22m[32m 5[2mms[22m[39m
+     [2m[90m↓[39m[22m Payload 1: Reject other user profile modifications
+     [2m[90m↓[39m[22m Payload 2: Reject privilege escalation
+     [2m[90m↓[39m[22m Payload 3: Reject shadow updates / ghost fields
+     [2m[90m↓[39m[22m Payload 4: Reject invalid type specs for typing stats
+     [2m[90m↓[39m[22m Payload 5: Reject negative levels or XP
+     [2m[90m↓[39m[22m Payload 6: Reject out of bounds values (speed hacking)
+     [2m[90m↓[39m[22m Payload 7: Reject ID poisoning / junk characters in subcollection keys
+     [2m[90m↓[39m[22m Payload 8: Reject hijacking leaderboard entry names or user UIDs
+     [2m[90m↓[39m[22m Payload 9: Reject client-injected temporal data
+     [2m[90m↓[39m[22m Payload 10: Reject cross-user read attempts
+     [2m[90m↓[39m[22m Payload 11: Reject bloated arrays (denial of wallet)
+     [2m[90m↓[39m[22m Payload 12: Reject accuracy values greater than 100%
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m18 passed[39m[22m[90m (19)[39m
+[2m      Tests [22m [1m[32m33 passed[39m[22m[2m | [22m[33m12 skipped[39m[90m (45)[39m
+[2m   Start at [22m 14:59:53
+[2m   Duration [22m 37.35s[2m (transform 991ms, setup 1.66s, import 5.41s, tests 6.02s, environment 20.21s)[22m
+

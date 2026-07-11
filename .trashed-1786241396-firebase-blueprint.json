@@ -1,0 +1,91 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "Core profile, statistics, achievements, settings, challenges, and lesson completions for a user.",
+      "type": "object",
+      "properties": {
+        "profile": { "type": "object", "description": "Contains levels, XP, coins, unlocked skins, name" },
+        "stats": { "type": "object", "description": "Contains average WPM, best WPM, totals, history" },
+        "achievements": { "type": "array", "description": "Lists current status of achievements" },
+        "settings": { "type": "object", "description": "User preference settings for keyboard and interface" },
+        "dailyChallenges": { "type": "array", "description": "List of current daily challenges" },
+        "completedLessons": { "type": "array", "description": "List of completed lesson IDs" },
+        "lastSynced": { "type": "string", "description": "ISO timestamp of the last cloud synchronization" }
+      },
+      "required": ["profile", "stats", "achievements", "settings"]
+    },
+    "LeaderboardEntry": {
+      "title": "LeaderboardEntry",
+      "description": "A publicly readable leaderboard entry representing a user's typing prowess.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "Uid of the user" },
+        "name": { "type": "string", "description": "Display name of the user" },
+        "avatar": { "type": "string", "description": "Display avatar" },
+        "level": { "type": "number", "description": "Level of the user" },
+        "bestWpm": { "type": "number", "description": "Highest speed" },
+        "accuracy": { "type": "number", "description": "Overall accuracy percentage" },
+        "kb": { "type": "string", "description": "Keyboard model used" },
+        "layout": { "type": "string", "description": "Keyboard layout used" },
+        "country": { "type": "string", "description": "Country code or flag" },
+        "updatedAt": { "type": "string", "description": "ISO timestamp of update" }
+      },
+      "required": ["userId", "name", "bestWpm", "accuracy"]
+    },
+    "Paragraph": {
+      "title": "Paragraph",
+      "description": "A professional high-quality typing practice paragraph loaded from cloud database.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique ID of the paragraph" },
+        "title": { "type": "string", "description": "Descriptive title of the paragraph" },
+        "category": { "type": "string", "description": "One of the 24 professional categories" },
+        "difficulty": { "type": "string", "description": "Beginner, Easy, Medium, Hard, or Expert" },
+        "wordCount": { "type": "number", "description": "Total word count of the text" },
+        "estimatedTime": { "type": "number", "description": "Estimated time to type in seconds" },
+        "language": { "type": "string", "description": "Language of the text (e.g., English)" },
+        "tags": { "type": "array", "description": "Relevant search/filter tags" },
+        "createdAt": { "type": "number", "description": "Unix timestamp when added" },
+        "content": { "type": "string", "description": "The complete typing text content" }
+      },
+      "required": ["id", "title", "category", "difficulty", "wordCount", "estimatedTime", "language", "tags", "createdAt", "content"]
+    },
+    "BetaFeedback": {
+      "title": "BetaFeedback",
+      "description": "User feedback submitted during beta testing.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "username": { "type": "string" },
+        "rating": { "type": "number" },
+        "category": { "type": "string" },
+        "message": { "type": "string" },
+        "device": { "type": "string" },
+        "androidVersion": { "type": "string" },
+        "appVersion": { "type": "string" },
+        "keyboardType": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["rating", "category", "message", "device", "appVersion", "keyboardType", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Store user profiles, XP, levels, coins, streaks, achievements, typing statistics, and settings"
+    },
+    "/leaderboard/{leaderboardId}": {
+      "schema": "LeaderboardEntry",
+      "description": "Stores user standings for overall, mobile, and hardware keyboards"
+    },
+    "/paragraphs/{paragraphId}": {
+      "schema": "Paragraph",
+      "description": "Publicly read-only database of scalable practice paragraphs, writable by authenticated users to allow seeding and additions."
+    },
+    "/beta_feedback/{feedbackId}": {
+      "schema": "BetaFeedback",
+      "description": "Stores user feedback submissions"
+    }
+  }
+}

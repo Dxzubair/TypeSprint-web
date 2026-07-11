@@ -1,0 +1,30 @@
+[
+  {
+    "id": "ssc-steno-2024-01",
+    "title": "SSC Stenographer Administrative Dictation",
+    "content": "In the matter of development projects, the coordination between the state and central ministries is of paramount importance. The allocation of regional funds requires deep auditing to ensure public money is spent to maximize local employment in standard road transport systems, secondary schooling upgrades, and village sanitation pipelines.",
+    "exam": "SSC Stenographer",
+    "difficulty": "Medium",
+    "wordCount": 55,
+    "estimatedTime": 90,
+    "language": "English",
+    "category": "Office Orders",
+    "tags": ["Official", "Dictation", "Steno"],
+    "isCustom": false,
+    "createdAt": 1719875664000
+  },
+  {
+    "id": "police-patrol-01",
+    "title": "Police Department Night Patrol Directive",
+    "content": "All station house officers are hereby directed to implement strict nightly patrolling schedules across sensitive sectors to enhance public safety. Weekly logs indicating team rosters, emergency vehicle fuel consumption, and wireless communication check-ins must be digitally signed and compiled for direct dispatch to the Deputy Commissioner's office for visual dashboard verification.",
+    "exam": "Police",
+    "difficulty": "Easy",
+    "wordCount": 55,
+    "estimatedTime": 80,
+    "language": "English",
+    "category": "Office Orders",
+    "tags": ["Security", "Directive", "Official"],
+    "isCustom": false,
+    "createdAt": 1719875664000
+  }
+]

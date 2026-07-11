@@ -1,0 +1,28 @@
+[
+  {
+    "id": "tech-essay-ai-01",
+    "title": "The Evolution of Neural Network Architectures",
+    "content": "Deep learning models have evolved rapidly from simple feedforward layers to highly complex, self-attentive transformer mechanisms. These architectures allow algorithms to capture long-range sequences and context in natural language processing. Training these networks requires massive parallel computing clusters, advanced gradient optimization functions, and robust hardware configurations to sustain multi-billion parameter configurations.",
+    "difficulty": "Hard",
+    "wordCount": 60,
+    "estimatedTime": 105,
+    "language": "English",
+    "category": "Technical Essays",
+    "tags": ["AI", "Neural Networks", "Deep Learning"],
+    "isCustom": false,
+    "createdAt": 1719875664000
+  },
+  {
+    "id": "tech-essay-quantum-01",
+    "title": "Quantum Computing Superposition Principles",
+    "content": "Quantum systems leverage the unique physics of superposition and entanglement to solve extremely intensive mathematical problems that remain completely intractable for traditional binary systems. Qubits represent complex multi-state amplitudes rather than simple ones or zeros. Controlling physical decoherence rates and implementing error-correction cycles is the primary technical hurdle faced by top research institutions worldwide.",
+    "difficulty": "Expert",
+    "wordCount": 59,
+    "estimatedTime": 115,
+    "language": "English",
+    "category": "Technical Essays",
+    "tags": ["Quantum", "Physics", "Computing"],
+    "isCustom": false,
+    "createdAt": 1719875664000
+  }
+]

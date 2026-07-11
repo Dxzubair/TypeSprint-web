@@ -1,0 +1,20 @@
+[
+  {
+    "id": "p1",
+    "title": "Speed Typing Basics",
+    "text": "The quick brown fox jumps over the lazy dog. This classical sentence contains every letter in the English alphabet, making it excellent for finger placement exercises.",
+    "difficulty": "Easy"
+  },
+  {
+    "id": "p2",
+    "title": "Mechanical Keyboards",
+    "text": "Tactile switches provide a distinct physical bump upon actuation, allowing typists to feel exactly when a key press has registered. This tactile feedback often leads to faster typing speeds and fewer errors.",
+    "difficulty": "Medium"
+  },
+  {
+    "id": "p3",
+    "title": "Continuous Practice",
+    "text": "Consistency and deliberate practice are key elements of muscle memory development. Regular short training sessions are far more effective for speed and accuracy than occasional marathon typing tests.",
+    "difficulty": "Hard"
+  }
+]

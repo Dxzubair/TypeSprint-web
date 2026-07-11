@@ -1,0 +1,61 @@
+name: Android CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: gradle
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+
+    - name: Restore Gradle Wrapper
+      run: |
+        if [ ! -f gradle/wrapper/gradle-wrapper.jar ]; then
+          gradle wrapper
+        fi
+
+    - name: Generate Release Keystore
+      run: |
+        keytool -genkey -v -keystore app/release.keystore -alias alias -keyalg RSA -keysize 2048 -validity 10000 -storepass password -keypass password -dname "CN=TypeSprint, OU=App, O=TypeSprint, L=City, S=State, C=US"
+
+    - name: Build Release APK
+      run: ./gradlew assembleRelease
+      env:
+        KEYSTORE_PASSWORD: password
+        KEY_ALIAS: alias
+        KEY_PASSWORD: password
+
+    - name: Build Release App Bundle (AAB)
+      run: ./gradlew bundleRelease
+      env:
+        KEYSTORE_PASSWORD: password
+        KEY_ALIAS: alias
+        KEY_PASSWORD: password
+
+    - name: Upload Release APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: typesprint-release-apk
+        path: app/build/outputs/apk/release/app-release.apk
+
+    - name: Upload Release AAB
+      uses: actions/upload-artifact@v4
+      with:
+        name: typesprint-release-aab
+        path: app/build/outputs/bundle/release/app-release.aab

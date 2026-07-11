@@ -1,0 +1,119 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Global Safety Net: Default Deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // Entity Validations
+    function isValidUser(data) {
+      return data.keys().hasOnly(['profile', 'stats', 'achievements', 'settings', 'completedLessons', 'dailyChallenges', 'lastSynced']) &&
+             (!data.keys().contains('profile') || (
+               data.profile is map &&
+               data.profile.keys().hasOnly(['xp', 'level', 'name', 'username', 'coins', 'gems', 'selectedAvatar', 'selectedTitle', 'unlockedAvatars', 'unlockedTitles', 'unlockedThemes', 'unlockedSkins', 'selectedSkin', 'selectedFrame', 'selectedNameColor', 'selectedSfxPack', 'selectedTypingEffect', 'selectedCursorStyle', 'selectedFont', 'unlockedFrames', 'unlockedNameColors', 'unlockedSfxPacks', 'unlockedTypingEffects', 'unlockedCursorStyles', 'unlockedFonts', 'calendarClaimedDays', 'calendarLastClaimDate', 'streakDaily', 'streakWeekly', 'streakMonthly', 'streakYearly', 'battlePassXp', 'battlePassTier', 'battlePassPremium', 'claimedFreeTiers', 'claimedPremiumTiers', 'typingMode', 'keyboardType', 'deviceName', 'onboardingCompleted', 'email', 'profilePhoto', 'country', 'preferredLanguage']) &&
+               (!data.profile.keys().contains('xp') || (data.profile.xp is number && data.profile.xp >= 0)) &&
+               (!data.profile.keys().contains('level') || (data.profile.level is number && data.profile.level >= 0))
+             )) &&
+             (!data.keys().contains('stats') || (
+               data.stats is map &&
+               data.stats.keys().hasOnly(['bestWpm', 'avgWpm', 'bestAccuracy', 'avgAccuracy', 'totalSessions', 'totalMinutes', 'totalCorrectKeystrokes', 'totalIncorrectKeystrokes', 'totalAccuracy', 'lifetimeAccuracy', 'streak', 'longestStreak', 'lastPracticeDate', 'mistypedKeys', 'history']) &&
+               (!data.stats.keys().contains('bestWpm') || (data.stats.bestWpm is number && data.stats.bestWpm >= 0 && data.stats.bestWpm <= 500))
+             )) &&
+             (!data.keys().contains('achievements') || data.achievements is list) &&
+             (!data.keys().contains('settings') || (
+               data.settings is map &&
+               data.settings.keys().hasOnly(['layout', 'soundType', 'backspaceEnabled', 'simulatedConnection', 'showFingerGuide', 'blockOnScreenKeyboard', 'theme', 'fontFamily', 'fontSize', 'hapticEnabled', 'language'])
+             )) &&
+             (!data.keys().contains('completedLessons') || (data.completedLessons is list && data.completedLessons.size() < 500)) &&
+             (!data.keys().contains('dailyChallenges') || data.dailyChallenges is list) &&
+             (!data.keys().contains('lastSynced') || data.lastSynced == request.time);
+    }
+
+    function isValidLeaderboardEntry(data) {
+      return data.userId is string && data.userId.size() <= 128 && data.userId == request.auth.uid &&
+             data.name is string && data.name.size() <= 100 &&
+             data.bestWpm is number && data.bestWpm >= 0 && data.bestWpm <= 500 &&
+             data.accuracy is number && data.accuracy >= 0 && data.accuracy <= 100 &&
+             (!data.keys().contains('avatar') || data.avatar is string) &&
+             (!data.keys().contains('level') || data.level is number) &&
+             (!data.keys().contains('kb') || data.kb is string) &&
+             (!data.keys().contains('layout') || data.layout is string) &&
+             (!data.keys().contains('country') || data.country is string) &&
+             (!data.keys().contains('updatedAt') || data.updatedAt is string); 
+     }
+
+    function isValidParagraph(data) {
+      return data.id is string &&
+             data.title is string && data.title.size() <= 200 &&
+             data.category is string &&
+             data.difficulty is string &&
+             data.wordCount is number &&
+             data.estimatedTime is number &&
+             data.language is string &&
+             data.tags is list &&
+             data.createdAt is number &&
+             data.content is string;
+    }
+
+    // Match blocks
+    match /users/{userId} {
+      allow read: if isOwner(userId);
+      allow create: if isOwner(userId) && isValidUser(incoming());
+      allow update: if isOwner(userId) && isValidUser(incoming());
+      allow delete: if isOwner(userId);
+      
+      match /custom_paragraphs/{paragraphId} {
+        allow read: if isOwner(userId) && isValidId(paragraphId);
+        allow write: if isOwner(userId) && isValidId(paragraphId) && 
+                     (!incoming().keys().contains('content') || (incoming().content is string && incoming().content.size() <= 5000));
+      }
+    }
+
+    match /leaderboard/{leaderboardId} {
+      allow read: if true;
+      allow create: if isSignedIn() && incoming().userId == request.auth.uid && isValidLeaderboardEntry(incoming()) && isValidId(leaderboardId);
+      allow update: if isSignedIn() && existing().userId == request.auth.uid && incoming().userId == request.auth.uid && isValidLeaderboardEntry(incoming()) && isValidId(leaderboardId);
+      allow delete: if isSignedIn() && existing().userId == request.auth.uid && isValidId(leaderboardId);
+    }
+
+    match /paragraphs/{paragraphId} {
+      allow read: if true;
+      allow create, update: if isSignedIn() && isValidParagraph(incoming()) && isValidId(paragraphId);
+      allow delete: if false;
+    }
+
+    match /beta_feedback/{feedbackId} {
+      allow read, write: if isSignedIn() && 
+                         (!incoming().keys().contains('message') || (incoming().message is string && incoming().message.size() <= 5000));
+    }
+
+    match /paragraph_reports/{reportId} {
+      allow read, write: if isSignedIn() && 
+                         (!incoming().keys().contains('comment') || (incoming().comment is string && incoming().comment.size() <= 5000)) &&
+                         (!incoming().keys().contains('content') || (incoming().content is string && incoming().content.size() <= 5000));
+    }
+  }
+}

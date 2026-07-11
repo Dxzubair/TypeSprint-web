@@ -1,0 +1,26 @@
+[
+  {
+    "id": "e1",
+    "name": "SSC CHSL Skill Test",
+    "durationMinutes": 10,
+    "allowBackspace": true,
+    "highlightErrors": false,
+    "description": "Standard Staff Selection Commission Combined Higher Secondary Level typing test. Accuracy is calculated strictly based on full or half errors."
+  },
+  {
+    "id": "e2",
+    "name": "RRB NTPC Typing Test",
+    "durationMinutes": 10,
+    "allowBackspace": false,
+    "highlightErrors": false,
+    "description": "Railway Recruitment Board NTPC typing skill test. Backspace is completely disabled, and errors are highlighted only after completion."
+  },
+  {
+    "id": "e3",
+    "name": "HC Clerk Exam Format",
+    "durationMinutes": 5,
+    "allowBackspace": true,
+    "highlightErrors": true,
+    "description": "High Court Clerk Typing test. Features a tight 5-minute time window with strict backspace limits."
+  }
+]

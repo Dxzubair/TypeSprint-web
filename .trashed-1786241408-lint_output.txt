@@ -1,0 +1,417 @@
+
+> typesprint-web@1.0.0 lint
+> eslint . --report-unused-disable-directives --max-warnings 0
+
+
+/app/applet/DRAFT_firestore.rules
+  2:0  error  Parsing error: Unexpected keyword or identifier
+
+/app/applet/firestore.rules
+  2:0  error  Parsing error: Unexpected keyword or identifier
+
+/app/applet/replace_fetch.mjs
+  40:1  error  'console' is not defined  no-undef
+
+/app/applet/src/App.test.tsx
+  15:32  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/app/applet/src/App.tsx
+    1:31  warning  'useCallback' is defined but never used   @typescript-eslint/no-unused-vars
+    7:3   warning  'CheckCircle2' is defined but never used  @typescript-eslint/no-unused-vars
+    7:17  warning  'Clock' is defined but never used         @typescript-eslint/no-unused-vars
+    7:34  warning  'RotateCcw' is defined but never used     @typescript-eslint/no-unused-vars
+    7:45  warning  'Award' is defined but never used         @typescript-eslint/no-unused-vars
+    7:52  warning  'AlertCircle' is defined but never used   @typescript-eslint/no-unused-vars
+  142:77  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  177:36  warning  'results' is defined but never used       @typescript-eslint/no-unused-vars
+  177:45  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  184:31  warning  'results' is defined but never used       @typescript-eslint/no-unused-vars
+  184:40  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  693:42  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  840:31  warning  'mode' is defined but never used          @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/AccountBottomSheet.tsx
+   4:22  warning  'CloudOff' is defined but never used               @typescript-eslint/no-unused-vars
+  17:26  warning  Unexpected any. Specify a different type           @typescript-eslint/no-explicit-any
+  40:27  warning  Unexpected any. Specify a different type           @typescript-eslint/no-explicit-any
+  64:9   warning  'usernameText' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/AchievementsShelf.test.tsx
+   5:23  warning  'TypingStats' is defined but never used            @typescript-eslint/no-unused-vars
+   5:36  warning  'KeyboardSettings' is defined but never used       @typescript-eslint/no-unused-vars
+  16:33  warning  'mockSettings' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/AchievementsShelf.tsx
+  2:10  warning  'motion' is defined but never used  @typescript-eslint/no-unused-vars
+  4:16  warning  'Zap' is defined but never used     @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/AiCoachDashboard.tsx
+   5:3   warning  'Flame' is defined but never used         @typescript-eslint/no-unused-vars
+   5:10  warning  'Target' is defined but never used        @typescript-eslint/no-unused-vars
+  76:19  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/AuthModal.test.tsx
+  5:23  warning  'TypingStats' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/AuthModal.tsx
+    5:16  warning  'AlertTriangle' is defined but never used  @typescript-eslint/no-unused-vars
+    5:78  warning  'BadgeInfo' is defined but never used      @typescript-eslint/no-unused-vars
+   31:3   warning  'stats' is defined but never used          @typescript-eslint/no-unused-vars
+   32:3   warning  'achievements' is defined but never used   @typescript-eslint/no-unused-vars
+   33:3   warning  'settings' is defined but never used       @typescript-eslint/no-unused-vars
+   84:30  warning  Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  145:19  warning  Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  185:19  warning  Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  208:19  warning  Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  236:19  warning  Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  250:19  warning  Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  268:14  warning  'err' is defined but never used            @typescript-eslint/no-unused-vars
+  480:28  warning  'err' is defined but never used            @typescript-eslint/no-unused-vars
+  480:33  warning  Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  808:32  warning  'err' is defined but never used            @typescript-eslint/no-unused-vars
+  808:37  warning  Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/BetaFeedbackModal.tsx
+  15:97  warning  'settings' is defined but never used      @typescript-eslint/no-unused-vars
+  50:64  error    Unnecessary escape character: \.          no-useless-escape
+  78:19  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/ExamHubDashboard.test.tsx
+  5:10  warning  'UserProfile' is defined but never used  @typescript-eslint/no-unused-vars
+  5:23  warning  'TypingStats' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/ExamHubDashboard.tsx
+     4:21   warning  'BookOpen' is defined but never used              @typescript-eslint/no-unused-vars
+     5:26   warning  'AlertTriangle' is defined but never used         @typescript-eslint/no-unused-vars
+     5:41   warning  'ChevronDown' is defined but never used           @typescript-eslint/no-unused-vars
+     5:54   warning  'Check' is defined but never used                 @typescript-eslint/no-unused-vars
+     5:61   warning  'ShieldAlert' is defined but never used           @typescript-eslint/no-unused-vars
+     5:74   warning  'FileText' is defined but never used              @typescript-eslint/no-unused-vars
+     5:90   warning  'HelpCircle' is defined but never used            @typescript-eslint/no-unused-vars
+     5:131  warning  'Percent' is defined but never used               @typescript-eslint/no-unused-vars
+     5:140  warning  'Calendar' is defined but never used              @typescript-eslint/no-unused-vars
+    46:12   warning  Unexpected any. Specify a different type          @typescript-eslint/no-explicit-any
+    47:32   warning  Unexpected any. Specify a different type          @typescript-eslint/no-explicit-any
+    48:26   warning  Unexpected any. Specify a different type          @typescript-eslint/no-explicit-any
+    52:3    warning  'settings' is defined but never used              @typescript-eslint/no-unused-vars
+    55:3    warning  'onNavigateToTab' is defined but never used       @typescript-eslint/no-unused-vars
+    74:20   warning  'setPassages' is assigned a value but never used  @typescript-eslint/no-unused-vars
+   611:11   warning  'passCount' is assigned a value but never used    @typescript-eslint/no-unused-vars
+   889:43   warning  Unexpected any. Specify a different type          @typescript-eslint/no-explicit-any
+  1007:68   warning  Unexpected any. Specify a different type          @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/GameZone.test.tsx
+  5:10  warning  'UserProfile' is defined but never used       @typescript-eslint/no-unused-vars
+  5:23  warning  'TypingStats' is defined but never used       @typescript-eslint/no-unused-vars
+  5:36  warning  'KeyboardSettings' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/GameZone.tsx
+     4:41  warning  'ShieldAlert' is defined but never used                 @typescript-eslint/no-unused-vars
+     5:3   warning  'RotateCcw' is defined but never used                   @typescript-eslint/no-unused-vars
+     5:25  warning  'Volume2' is defined but never used                     @typescript-eslint/no-unused-vars
+     5:34  warning  'VolumeX' is defined but never used                     @typescript-eslint/no-unused-vars
+     5:43  warning  'AlertTriangle' is defined but never used               @typescript-eslint/no-unused-vars
+     6:13  warning  'CheckSquare' is defined but never used                 @typescript-eslint/no-unused-vars
+     6:62  warning  'Smile' is defined but never used                       @typescript-eslint/no-unused-vars
+     8:54  warning  'Achievement' is defined but never used                 @typescript-eslint/no-unused-vars
+     8:67  warning  'DailyChallenge' is defined but never used              @typescript-eslint/no-unused-vars
+    74:26  warning  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+    85:79  warning  'onNavigateToTab' is defined but never used             @typescript-eslint/no-unused-vars
+    88:9   warning  'resolvedName' is assigned a value but never used       @typescript-eslint/no-unused-vars
+   103:10  warning  'soundEnabled' is assigned a value but never used       @typescript-eslint/no-unused-vars
+   103:24  warning  'setSoundEnabled' is assigned a value but never used    @typescript-eslint/no-unused-vars
+   104:10  warning  'simulationMode' is assigned a value but never used     @typescript-eslint/no-unused-vars
+   104:26  warning  'setSimulationMode' is assigned a value but never used  @typescript-eslint/no-unused-vars
+   116:14  warning  'e' is defined but never used                           @typescript-eslint/no-unused-vars
+   116:17  error    Empty block statement                                   no-empty
+   193:17  warning  '_' is defined but never used                           @typescript-eslint/no-unused-vars
+   458:29  warning  'profile' is defined but never used                     @typescript-eslint/no-unused-vars
+   472:10  warning  'maxCombo' is assigned a value but never used           @typescript-eslint/no-unused-vars
+   484:32  warning  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+   550:30  warning  'time' is defined but never used                        @typescript-eslint/no-unused-vars
+   920:60  warning  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+   921:10  warning  'gridAssigned' is assigned a value but never used       @typescript-eslint/no-unused-vars
+   925:46  warning  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+   955:9   warning  'difficultyParams' is assigned a value but never used   @typescript-eslint/no-unused-vars
+   991:67  warning  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+  1058:89  warning  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+  1089:88  warning  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+  1716:29  warning  'profile' is defined but never used                     @typescript-eslint/no-unused-vars
+  1726:10  warning  'combo' is assigned a value but never used              @typescript-eslint/no-unused-vars
+  1727:10  warning  'maxCombo' is assigned a value but never used           @typescript-eslint/no-unused-vars
+  1731:32  warning  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/HomeDashboard.tsx
+    3:16  warning  'Zap' is defined but never used                  @typescript-eslint/no-unused-vars
+    3:21  warning  'Award' is defined but never used                @typescript-eslint/no-unused-vars
+    4:71  warning  'Sparkles' is defined but never used             @typescript-eslint/no-unused-vars
+   16:26  warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+   32:3   warning  'simulatedConnection' is defined but never used  @typescript-eslint/no-unused-vars
+  354:48  warning  'idx' is defined but never used                  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/LeaderboardsDashboard.test.tsx
+  18:7  warning  'mockSettings' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/LeaderboardsDashboard.tsx
+    3:38  warning  'Flame' is defined but never used                 @typescript-eslint/no-unused-vars
+    4:3   warning  'ChevronRight' is defined but never used          @typescript-eslint/no-unused-vars
+    4:28  warning  'Sparkles' is defined but never used              @typescript-eslint/no-unused-vars
+    4:38  warning  'Clock' is defined but never used                 @typescript-eslint/no-unused-vars
+    5:11  warning  'Keyboard' is defined but never used              @typescript-eslint/no-unused-vars
+   52:50  warning  Unexpected any. Specify a different type          @typescript-eslint/no-explicit-any
+  205:9   warning  'tournaments' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  280:48  warning  Unexpected any. Specify a different type          @typescript-eslint/no-explicit-any
+  392:59  warning  Unexpected any. Specify a different type          @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/ParagraphHubDashboard.test.tsx
+  5:10  warning  'UserProfile' is defined but never used       @typescript-eslint/no-unused-vars
+  5:23  warning  'TypingStats' is defined but never used       @typescript-eslint/no-unused-vars
+  5:36  warning  'KeyboardSettings' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/ParagraphHubDashboard.tsx
+     4:49  warning  'Folder' is defined but never used                      @typescript-eslint/no-unused-vars
+     5:39  warning  'ChevronRight' is defined but never used                @typescript-eslint/no-unused-vars
+     5:53  warning  'ArrowUpDown' is defined but never used                 @typescript-eslint/no-unused-vars
+     5:66  warning  'Check' is defined but never used                       @typescript-eslint/no-unused-vars
+     6:17  warning  'Clipboard' is defined but never used                   @typescript-eslint/no-unused-vars
+     6:28  warning  'Lock' is defined but never used                        @typescript-eslint/no-unused-vars
+     7:14  warning  'Keyboard' is defined but never used                    @typescript-eslint/no-unused-vars
+    10:10  warning  'saveUserDataToCloud' is defined but never used         @typescript-eslint/no-unused-vars
+    88:12  warning  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+    89:10  warning  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+    93:69  warning  'stats' is defined but never used                       @typescript-eslint/no-unused-vars
+    94:11  warning  'user' is assigned a value but never used               @typescript-eslint/no-unused-vars
+   117:10  warning  'languageFilter' is assigned a value but never used     @typescript-eslint/no-unused-vars
+   117:26  warning  'setLanguageFilter' is assigned a value but never used  @typescript-eslint/no-unused-vars
+   398:19  warning  'folderId' is assigned a value but never used           @typescript-eslint/no-unused-vars
+   749:44  warning  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+   810:74  warning  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+   823:62  warning  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+  1157:60  warning  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+  1307:77  warning  Unexpected any. Specify a different type                @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/ProfileDashboard.test.tsx
+  5:10  warning  'UserProfile' is defined but never used       @typescript-eslint/no-unused-vars
+  5:23  warning  'TypingStats' is defined but never used       @typescript-eslint/no-unused-vars
+  5:36  warning  'KeyboardSettings' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/ProfileDashboard.tsx
+   2:10  warning  'motion' is defined but never used                       @typescript-eslint/no-unused-vars
+   4:21  warning  'Flame' is defined but never used                        @typescript-eslint/no-unused-vars
+   5:19  warning  'Globe' is defined but never used                        @typescript-eslint/no-unused-vars
+   5:46  warning  'Sparkles' is defined but never used                     @typescript-eslint/no-unused-vars
+   6:39  warning  'ChevronRight' is defined but never used                 @typescript-eslint/no-unused-vars
+   6:53  warning  'HelpCircle' is defined but never used                   @typescript-eslint/no-unused-vars
+  30:3   warning  'onUpdateProfile' is defined but never used              @typescript-eslint/no-unused-vars
+  40:9   warning  'totalWordsTyped' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  57:9   warning  'lockedAchievements' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/ReportParagraphSheet.tsx
+   3:10  warning  'AlertTriangle' is defined but never used  @typescript-eslint/no-unused-vars
+   3:28  warning  'Send' is defined but never used           @typescript-eslint/no-unused-vars
+  54:17  warning  Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/RewardHub.test.tsx
+   5:10  warning  'UserProfile' is defined but never used            @typescript-eslint/no-unused-vars
+   5:23  warning  'TypingStats' is defined but never used            @typescript-eslint/no-unused-vars
+   5:36  warning  'KeyboardSettings' is defined but never used       @typescript-eslint/no-unused-vars
+  16:33  warning  'mockSettings' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/RewardHub.tsx
+     1:27  warning  'useEffect' is defined but never used                     @typescript-eslint/no-unused-vars
+     4:32  warning  'Shield' is defined but never used                        @typescript-eslint/no-unused-vars
+     4:50  warning  'Zap' is defined but never used                           @typescript-eslint/no-unused-vars
+     4:55  warning  'Lock' is defined but never used                          @typescript-eslint/no-unused-vars
+     4:61  warning  'Play' is defined but never used                          @typescript-eslint/no-unused-vars
+     5:3   warning  'Hourglass' is defined but never used                     @typescript-eslint/no-unused-vars
+     5:24  warning  'BookOpen' is defined but never used                      @typescript-eslint/no-unused-vars
+     5:58  warning  'Eye' is defined but never used                           @typescript-eslint/no-unused-vars
+     6:3   warning  'ChevronRight' is defined but never used                  @typescript-eslint/no-unused-vars
+     6:17  warning  'User' is defined but never used                          @typescript-eslint/no-unused-vars
+     6:23  warning  'Settings' is defined but never used                      @typescript-eslint/no-unused-vars
+     6:39  warning  'Bell' is defined but never used                          @typescript-eslint/no-unused-vars
+     6:56  warning  'ChevronDown' is defined but never used                   @typescript-eslint/no-unused-vars
+     7:17  warning  'RefreshCw' is defined but never used                     @typescript-eslint/no-unused-vars
+     7:28  warning  'Smartphone' is defined but never used                    @typescript-eslint/no-unused-vars
+     7:40  warning  'AlertCircle' is defined but never used                   @typescript-eslint/no-unused-vars
+     8:16  warning  'HelpCircle' is defined but never used                    @typescript-eslint/no-unused-vars
+     8:28  warning  'Gamepad2' is defined but never used                      @typescript-eslint/no-unused-vars
+     8:38  warning  'Volume2' is defined but never used                       @typescript-eslint/no-unused-vars
+     8:47  warning  'UserCheck' is defined but never used                     @typescript-eslint/no-unused-vars
+     8:58  warning  'FlameKindling' is defined but never used                 @typescript-eslint/no-unused-vars
+    24:27  warning  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+    46:3   warning  'achievements' is defined but never used                  @typescript-eslint/no-unused-vars
+    47:3   warning  'dailyChallenges' is defined but never used               @typescript-eslint/no-unused-vars
+    49:3   warning  'onUpdateStats' is defined but never used                 @typescript-eslint/no-unused-vars
+    50:3   warning  'onUpdateAchievements' is defined but never used          @typescript-eslint/no-unused-vars
+    82:10  warning  'typingTimestamps' is assigned a value but never used     @typescript-eslint/no-unused-vars
+    82:28  warning  'setTypingTimestamps' is assigned a value but never used  @typescript-eslint/no-unused-vars
+   124:9   warning  'nextRank' is assigned a value but never used             @typescript-eslint/no-unused-vars
+   234:62  warning  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+   240:64  warning  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+   246:66  warning  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+   252:18  warning  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+   253:18  warning  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+   257:28  warning  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+   260:28  warning  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+   263:28  warning  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+   273:9   error    'listSource' is never reassigned. Use 'const' instead     prefer-const
+   473:30  warning  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+   486:29  warning  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+   499:41  warning  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+   539:38  warning  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+   567:35  warning  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+   648:9   warning  'isAntiCheatSecure' is assigned a value but never used    @typescript-eslint/no-unused-vars
+   671:25  warning  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+   816:59  warning  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+   990:23  warning  'locked' is assigned a value but never used               @typescript-eslint/no-unused-vars
+  1211:59  warning  Unexpected any. Specify a different type                  @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/SettingsPanel.test.tsx
+   2:26  warning  'fireEvent' is defined but never used     @typescript-eslint/no-unused-vars
+   3:32  warning  'vi' is defined but never used            @typescript-eslint/no-unused-vars
+  11:37  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/SettingsPanel.tsx
+    3:3   warning  'Settings' is defined but never used              @typescript-eslint/no-unused-vars
+    5:13  warning  'RefreshCw' is defined but never used             @typescript-eslint/no-unused-vars
+   34:30  warning  'triggerSync' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  393:90  warning  Unexpected any. Specify a different type          @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/StatsDashboard.test.tsx
+   3:32  warning  'vi' is defined but never used            @typescript-eslint/no-unused-vars
+  11:48  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/app/applet/src/components/StatsDashboard.tsx
+  2:10  warning  'motion' is defined but never used         @typescript-eslint/no-unused-vars
+  5:10  warning  'saveStats' is defined but never used      @typescript-eslint/no-unused-vars
+  5:21  warning  'INITIAL_STATS' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/TypingEngine.test.tsx
+  2:26  warning  'fireEvent' is defined but never used   @typescript-eslint/no-unused-vars
+  2:37  warning  'act' is defined but never used         @typescript-eslint/no-unused-vars
+  3:36  warning  'beforeEach' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/applet/src/components/TypingEngine.tsx
+    2:18  warning  'AnimatePresence' is defined but never used                  @typescript-eslint/no-unused-vars
+    4:40  warning  'Activity' is defined but never used                         @typescript-eslint/no-unused-vars
+    5:18  warning  'ShieldCheck' is defined but never used                      @typescript-eslint/no-unused-vars
+    6:17  warning  'ArrowRight' is defined but never used                       @typescript-eslint/no-unused-vars
+    6:29  warning  'Lock' is defined but never used                             @typescript-eslint/no-unused-vars
+    6:57  warning  'BarChart3' is defined but never used                        @typescript-eslint/no-unused-vars
+    6:68  warning  'ListOrdered' is defined but never used                      @typescript-eslint/no-unused-vars
+   16:27  warning  'loadAchievements' is defined but never used                 @typescript-eslint/no-unused-vars
+   16:45  warning  'loadDailyChallenges' is defined but never used              @typescript-eslint/no-unused-vars
+   54:15  warning  'scale' is assigned a value but never used                   @typescript-eslint/no-unused-vars
+  111:9   warning  'sessionId' is assigned a value but never used               @typescript-eslint/no-unused-vars
+  134:31  warning  'setSoftwareTranslation' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  146:10  warning  'userStats' is assigned a value but never used               @typescript-eslint/no-unused-vars
+  160:27  warning  Unexpected any. Specify a different type                     @typescript-eslint/no-explicit-any
+  236:9   warning  'currentIdx' is assigned a value but never used              @typescript-eslint/no-unused-vars
+  719:21  error    'isCursor' is never reassigned. Use 'const' instead          prefer-const
+  760:9   warning  'xpPercentage' is assigned a value but never used            @typescript-eslint/no-unused-vars
+  765:9   warning  'lessonNumberString' is assigned a value but never used      @typescript-eslint/no-unused-vars
+
+/app/applet/src/context/AuthContext.tsx
+  15:24  warning  'saveUserDataToCloud' is defined but never used  @typescript-eslint/no-unused-vars
+  16:10  warning  'loadProfile' is defined but never used          @typescript-eslint/no-unused-vars
+  16:23  warning  'loadStats' is defined but never used            @typescript-eslint/no-unused-vars
+  16:34  warning  'loadAchievements' is defined but never used     @typescript-eslint/no-unused-vars
+  16:52  warning  'loadSettings' is defined but never used         @typescript-eslint/no-unused-vars
+
+/app/applet/src/setupTests.ts
+  52:32  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/app/applet/src/tests/betaFeedback.test.tsx
+  12:45  warning  'deleteDoc' is defined but never used     @typescript-eslint/no-unused-vars
+  28:32  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/app/applet/src/types.ts
+  234:15  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  251:14  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/app/applet/src/utils/audio.ts
+  11:57  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/app/applet/src/utils/feedback.ts
+   72:43  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   91:14  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+   98:47  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  117:14  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+
+/app/applet/src/utils/firebase.ts
+   4:10  warning  'getFirestore' is defined but never used  @typescript-eslint/no-unused-vars
+   8:11  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   9:9   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  10:14  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  28:23  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/app/applet/src/utils/keyboardDetector.ts
+   67:28   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   72:39   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   73:48   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   96:28   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  100:39   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  121:36   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  121:63   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  121:90   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  121:125  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  145:28   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  414:28   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  436:14   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  440:14   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  450:14   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  462:52   warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/app/applet/src/utils/storage.test.ts
+   1:44   warning  'vi' is defined but never used                   @typescript-eslint/no-unused-vars
+   4:14   warning  'saveStats' is defined but never used            @typescript-eslint/no-unused-vars
+   5:3    warning  'loadAchievements' is defined but never used     @typescript-eslint/no-unused-vars
+   5:21   warning  'saveAchievements' is defined but never used     @typescript-eslint/no-unused-vars
+   6:62   warning  'markLessonCompleted' is defined but never used  @typescript-eslint/no-unused-vars
+   6:100  warning  'INITIAL_STATS' is defined but never used        @typescript-eslint/no-unused-vars
+   6:115  warning  'INITIAL_SETTINGS' is defined but never used     @typescript-eslint/no-unused-vars
+  55:26   warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  85:12   warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  88:12   warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  94:12   warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+
+/app/applet/src/utils/storage.ts
+  626:12  warning  'e' is defined but never used  @typescript-eslint/no-unused-vars
+  638:12  warning  'e' is defined but never used  @typescript-eslint/no-unused-vars
+  658:12  warning  'e' is defined but never used  @typescript-eslint/no-unused-vars
+  672:12  warning  'e' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/applet/src/utils/sync.test.ts
+   2:10  warning  'saveUserDataToCloud' is defined but never used  @typescript-eslint/no-unused-vars
+   3:10  warning  'setDoc' is defined but never used               @typescript-eslint/no-unused-vars
+   3:26  warning  'doc' is defined but never used                  @typescript-eslint/no-unused-vars
+  49:18  warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  74:18  warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+
+/app/applet/src/utils/sync.ts
+   10:3    warning  'loadDailyChallenges' is defined but never used  @typescript-eslint/no-unused-vars
+   53:77   warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+   78:43   warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+   78:49   warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+   85:20   warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  255:60   warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  261:20   warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  380:111  warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  381:111  warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  383:155  warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  384:111  warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  387:99   warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  388:135  warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  422:36   warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  422:44   warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  448:43   warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  456:41   warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  464:41   warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  475:41   warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  484:37   warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+  492:47   warning  Unexpected any. Specify a different type         @typescript-eslint/no-explicit-any
+
+✖ 321 problems (7 errors, 314 warnings)
+  2 errors and 0 warnings potentially fixable with the `--fix` option.
+

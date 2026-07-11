@@ -1,0 +1,7 @@
+  beforeAll(async () => {
+    try {
+      await signInAnonymously(auth);
+    } catch (e) {
+      console.warn('Failed to sign in anonymously for test:', e);
+    }
+  });

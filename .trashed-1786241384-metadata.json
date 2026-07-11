@@ -1,0 +1,6 @@
+{
+  "name": "TypeSprint",
+  "description": "A premium typing tutor styled like a modern Material 3 Android app, optimized for physical, USB OTG, and Bluetooth keyboards with lessons, tests, statistics, and gamified achievements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
