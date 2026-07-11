@@ -98,9 +98,9 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
   // Get source text
   const sourceText = useMemo(() => {
     if (sessionType === 'lesson' && lessonData) {
-      return lessonData.texts.join('\n');
+      return lessonData.texts.join('\n').replace(/\n{2,}/g, '\n').trim();
     }
-    return customText || 'TypeSprint external keyboard tutor is ready.';
+    return (customText || 'TypeSprint external keyboard tutor is ready.').replace(/\n{2,}/g, '\n').trim();
   }, [sessionType, lessonData, customText]);
 
   // External physical keyboard detection status
@@ -544,6 +544,11 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
       
       setTypedText(newValue);
       triggerKeystrokeFeedback(typedChar, true);
+
+      const newTypedTokensSpace = newValue.split(/( |\n)/g);
+      if (newTypedTokensSpace.length >= sourceTokens.length) {
+        triggerComplete(elapsedSeconds);
+      }
     } else {
       const currentWordIdx = prevTypedTokens.length - 1;
       const targetWord = sourceTokens[currentWordIdx] || '';
@@ -1304,4 +1309,5 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
 
 
 /* v8 ignore stop */
+
 
