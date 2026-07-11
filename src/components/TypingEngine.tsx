@@ -98,7 +98,7 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
   // Get source text
   const sourceText = useMemo(() => {
     if (sessionType === 'lesson' && lessonData) {
-      return lessonData.texts.join('\n\n');
+      return lessonData.texts.join('\n');
     }
     return customText || 'TypeSprint external keyboard tutor is ready.';
   }, [sessionType, lessonData, customText]);
