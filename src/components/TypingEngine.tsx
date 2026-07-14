@@ -683,15 +683,20 @@ export const TypingEngine: React.FC<TypingEngineProps> = ({
 
   // Auto-scroll as the user types - scrolls ONLY the small text container itself,
   // never the page/window, so it can't cause the whole screen to jump on mobile.
+  // Uses getBoundingClientRect (viewport-relative) instead of offsetTop, since offsetTop
+  // is unreliable here due to nested positioned wrapper elements.
   useEffect(() => {
     const container = textContainerRef.current;
     const el = activeCharRef.current;
     if (!container || !el) return;
 
-    const elOffsetTop = el.offsetTop - container.offsetTop;
-    const elHeight = el.offsetHeight || 20;
+    const containerRect = container.getBoundingClientRect();
+    const elRect = el.getBoundingClientRect();
+
+    const elTopRelative = (elRect.top - containerRect.top) + container.scrollTop;
+    const elHeight = elRect.height || 20;
     const containerHeight = container.clientHeight;
-    const targetScrollTop = elOffsetTop - containerHeight / 2 + elHeight / 2;
+    const targetScrollTop = elTopRelative - containerHeight / 2 + elHeight / 2;
 
     container.scrollTo({
       top: Math.max(0, targetScrollTop),
